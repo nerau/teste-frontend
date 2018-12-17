@@ -18,6 +18,8 @@
 
 - Não é necessário que a fonte seja exatamente a mesma usada na arte. Se quiser mantê-la, é a "Montserrat".
 
+- Use o https://fontawesome.com/ para criar os ícones.
+
 Ao terminar o teste, solicite um pull request.
 
 Em caso de dúvidas, envie e-mail para contato@nerau.com.br.
