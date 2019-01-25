@@ -1,0 +1,440 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,☺
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*Reset end here*/
+*{
+	font-family: "Montserrat"
+}
+.center{
+	margin: 0 auto;
+	max-width: 90%;
+	width: 100%;
+}
+.justify-center{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+}
+.nav .wrapper{
+	align-items: center;
+	display: flex;
+	height: 150px;
+	justify-content: space-between;
+	position: relative;
+}
+
+.nav .wrapper ul, .nav .wrapper .logo{
+	display: flex;
+}
+.nav .wrapper ul{
+	height: 100%;
+}
+.nav-item{
+	align-items: center;
+	color: #aaaaaa;
+	display: flex;
+	font-family: "Montserrat";
+	font-weight: 700;
+	height: 100%;
+	letter-spacing: 3px;
+	margin-left: 30px;
+	cursor: pointer;
+	position: relative;
+	text-transform: uppercase;
+	transition: all 200ms ease-in-out;
+}
+.nav-item:after{
+	background-color: black;
+	top: 75%;
+	content: "";
+	height: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	transition: all 200ms ease-in-out;
+	width: 0;
+
+}
+.nav-item:hover{
+	color: black;
+}
+.nav-item:hover:after{
+	width: 100%;
+}
+.nav-item.menu-toggle, .nav-item.search{
+	font-size: 1.5em;
+	color: black;
+}
+.nav .search-form{
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	transition: 200ms;
+	width: 0;
+	z-index: 2;
+}
+.nav .search-form form{
+	width: 100%;
+}
+.nav .search-form input{
+	border: 1px solid #eeeeee;
+	box-sizing: border-box;
+	font-size: 1em;
+	height: 100px;
+	padding-left: 30px;
+	transition: all 200ms ease-in-out;
+	width: 100%;
+}
+.nav.search-bar-active .search-form{
+  width: 50%;
+}
+.nav-icons:after{
+	display: none;
+}
+.menu-toggle{
+	display: none;
+}
+.banner-home{
+	position: relative;
+	background-image: url(https://picsum.photos/1905/955?image=454&blur);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.signature{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%
+}
+.signature img{
+	width: 100%;
+}
+.banner-title{
+	color: rgba(183, 183, 183, 0.6);
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-size: 170%;
+	letter-spacing: 0.2em;
+	margin-top: 50px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.main-info{
+	color: #aaaaaa;
+	font-family: "Montserrat";
+	font-size: 30px;
+	font-weight: 300;
+	margin: 5% auto;
+	text-align: center;
+}
+.main-info h2{
+	line-height: 1.5em;
+	width: 80%;
+}
+.showcase-block{
+	display: flex;
+	justify-content: space-between;
+	margin: 5% 0;²
+}
+.showcase-block:nth-child(odd)>div:nth-child(1){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30%;
+}
+.showcase-block:nth-child(odd)>div:nth-child(2){
+	margin-left: 5%;
+	width: 65%;
+}
+.showcase-block:nth-child(even)>div:nth-child(2){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30%;
+}
+.showcase-block:nth-child(even)>div:nth-child(1){
+	margin-right: 5%;
+	width: 65%;
+}
+.showcase-block img{
+    height: auto;
+	max-width: 100%;
+    width: 100%;
+}
+.newsletter{
+	flex-direction: column;
+}
+.newsletter-title{
+	font-family: "Montserrat";
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.newsletter-info{
+	color: #aaaaaa;
+	font-family: "Montserrat";
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 150%;
+	margin: 2.5%;
+	text-align: center;
+	width: 80%;
+}
+.newsletter form{
+	display: inline-flex;
+	max-width: 80%;
+	position: relative;
+	width: 100%;
+}
+.newsletter input.e-mail{
+	border: 1px solid #aaaaaa;
+	color: #aaaaaa;
+	font-family: "Montserrat";
+	padding: 0 30px;
+	transition: all 200ms ease-in-out;
+	width: 100%;
+}
+.newsletter .submit{
+	background-color: black;
+	border: 0;
+	color: white;
+	cursor: pointer;
+	font-family: "Montserrat";
+  font-weight: 700;
+  max-width: 200px;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+  width: 30%;
+}
+.newsletter input.e-mail:focus, .nav .search-form input:focus{
+  border: 2px solid black;
+  outline: none;
+  transition: all 200ms ease-in-out;
+}
+.social-icons{
+	margin: 5% 0;
+}
+.social-icons .icon-list{
+	display: inline-flex;
+}
+.social-icons .icon-list>li{
+	font-size: 1.5em;
+	margin: 0 15px;
+}
+.social-icons a{
+	color: black;
+	text-decoration: none;
+}
+.social-icons .icon-list>li:first-child{
+	margin-left: 0;
+}
+.social-icons .icon-list>li:last-child{
+	margin-right: 0;
+}
+.copyright span{
+	color: #aaaaaa;
+	font-family: "Montserrat";
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 2.5%;
+	text-align: center;
+	width: 100%;
+}
+.nav .link-list{
+	display: inherit;
+}
+.nav.mobile-nav-active .menu-toggle, .nav.search-bar-active .search{
+	color: gray;
+}
+@media screen and (max-width: 1368px){
+	.menu-toggle{
+		display: inherit;
+	}
+	.nav .link-list{
+		background: white;
+		display: flex;
+		height: 0;
+		left: 0;
+		justify-content: center;
+		overflow: hidden;
+		position: absolute;
+		top: 100%;
+		transition: all 200ms ease-in-out;
+		width: 100%;
+		z-index: 2;
+	}
+	.nav .link-list>ul{
+		align-items: center;
+		flex-direction: column;
+		height: 328px;
+		width: 100%;
+	}
+	.nav .link-list li.nav-item{
+		border-top: 1px solid #ddd;
+		font-size: 1.5em;
+		height: 40px;
+		justify-content: center;
+		margin: 0;
+		width: 100%;
+	}
+	.nav.mobile-nav-active .link-list{
+		height: 328px;
+	}
+	.nav .search-form {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-left: 30px;
+		position: initial;
+	}
+	.nav.search-bar-active .search-form{
+		width: 100%;		
+	}
+	.nav .search-form input{
+		border: 0;
+		border-bottom: 1px solid #aaaaaa;
+		box-sizing: border-box;
+		font-size: 1.5em;
+		height: 50px;
+		padding-left: 30px;
+		width: 100%;
+	}
+	.nav .wrapper>ul{
+		justify-content: flex-end;
+	}
+	.nav .wrapper>ul, .search-form form{
+		width: 100%;
+	}
+	.search-form form{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.search-form input:focus, .nav .search-form input:focus{
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 2px solid black;
+		outline: none;
+	}
+	.nav-item.nav-icons{
+		font-size: 3em;
+		margin-left: 50px;
+	}
+	.nav .wrapper .logo img{
+		width: 100%;
+	}	
+}
+@media screen and (max-width: 1024px){
+	.newsletter input.e-mail{
+		height: 70px;
+		font-size: 1.5em;
+		text-align: center;
+		width: auto;
+	}
+	.newsletter .submit{
+		font-size: 1.5em;
+		height: 70px;
+		max-width: 100%;
+		width: 100%;
+	}
+	.social-icons .icon-list>li{
+		font-size: 3em;
+	}
+	.newsletter form{
+		flex-direction: column;
+	}
+	.nav .wrapper .link-list li.nav-item{
+		font-size: 1.5em;
+		height: 60px;
+	}
+	.nav .wrapper .link-list>ul, .nav.mobile-nav-active .wrapper .link-list{
+		height: 488px;
+	}
+	.nav .search-form input{
+		font-size: 1.3em;
+	}
+} 
+@media screen and (max-width: 768px){
+	.nav .search-form input{
+		font-size: 1.3em;
+		height: 70px;
+		width: 100%;
+	}
+	.nav-item.nav-icons{
+		font-size: 2.5em;
+		margin-left: 30px;
+	}
+	.nav .search-form{
+		position: absolute;
+	}
+	.nav .wrapper{
+		height: 120px;
+	}
+} 
+@media screen and (max-width: 425px){
+	.nav .search-form input{
+		font-size: 1em;
+	}
+	.nav-item.nav-icons {
+		font-size: 2em;
+		margin-left: 20px;
+	}
+}
