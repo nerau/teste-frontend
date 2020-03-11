@@ -219,7 +219,15 @@ footer .copyright {
     display: block;
   }
 
+  content .hero-description {
+    margin: 40px;
+  }
+
   footer .newsletter-info {
     margin-top: -80px;
+  }
+
+  footer .newsletter-info p {
+    margin: 25px 60px 40px 60px;
   }
 }
