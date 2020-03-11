@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,900&display=swap');
+
+body {
+  margin: 30px 45px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(157, 157, 157);
+}
+
+header .navbar {
+  display: flex;
+  width: 100%;
+}
+
+header .navbar a {
+  margin-right: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(124, 124, 124);
+}
+
+header .navbar a.nav-link, .navbar a.search-btn {
+  float: right;
+  margin-top: 4px;
+}
+
+header .navbar a.nav-link:hover, .nav-link:active {
+  color: black;
+  border-bottom: 5px solid black;
+  padding-bottom: 5px;
+}
+
+header .navbar a.logo {
+  font-size: 24px;
+  margin-left: 5px;
+  margin-right: auto;
+  margin-bottom: 7px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: black;
+  transform: scale(1.1, 1.3);
+}
+
+header a.search-btn {
+  color: black;
+}
+
+header a.hamburger-btn {
+  color: black;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: none;
+}
+
+content .video-container {
+  margin-top: 50px;
+  position: relative;
+}
+
+content .video-container video {
+  width: 100%;
+  z-index: 0;
+}
+
+content .video-container .overlay .hero-title {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  max-width: 65%;
+  height: auto;
+  z-index: 1;
+}
+
+content .video-container .overlay p {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  z-index: 1;
+  font-size: 1.8vw;
+  letter-spacing: 5px;
+}
+
+content .hero-description {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin: 100px;
+}
+
+content .photos-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, 20%);
+  row-gap: 10px;
+  column-gap: 22px;
+
+}
+
+#photo-1 {
+  width: 100%;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+#photo-2 {
+  width: 100%;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+#photo-3 {
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#photo-4 {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#photo-5 {
+  width: 100%;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+#photo-6 {
+  width: 100%;
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+footer .newsletter-info {
+  margin-top: -200px;
+  text-align: center;
+}
+
+footer .newsletter-info h3 {
+  color: black;
+  letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+footer .newsletter-info p {
+  margin: 25px 140px 40px 140px;
+  font-weight: 300;
+}
+
+footer .email {
+  outline: none;
+  width: 75%;
+  height: 40px;
+  margin-right: -5px;
+  text-align: center;
+}
+
+footer .signup-btn {
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 18px 40px;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+footer .social-icons {
+  margin-top: 150px;
+  text-align: center;
+}
+
+footer .social-icons i {
+  text-decoration: none;
+  color: black;
+  margin-right: 15px;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1120px) {
+  header .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .nav-link {
+    display: none;
+  }
+
+  header .nav-link.is-active {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+    font-size: 22px;
+  }
+
+  header .nav-link.is-active:hover {
+    color: black;
+    border-bottom: 5px solid black;
+  }
+
+  header a.hamburger-btn {
+    display: block;
+  }
+
+  footer .newsletter-info {
+    margin-top: -80px;
+  }
+}
