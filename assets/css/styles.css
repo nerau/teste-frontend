@@ -25,7 +25,7 @@ header .navbar a.nav-link, .navbar a.search-btn {
   margin-top: 4px;
 }
 
-header .navbar a.nav-link:hover {
+header .navbar a.nav-link:hover, .nav-link:active {
   color: black;
   border-bottom: 5px solid black;
   padding-bottom: 5px;
@@ -193,12 +193,26 @@ footer .copyright {
 }
 
 @media screen and (max-width: 1120px) {
+  header .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
   header .nav-link {
     display: none;
   }
 
-  header .nav-link-is-active {
-    display: block;
+  header .nav-link.is-active {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+    font-size: 22px;
+  }
+
+  header .nav-link.is-active:hover {
+    color: black;
+    border-bottom: 5px solid black;
   }
 
   header a.hamburger-btn {
